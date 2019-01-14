@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<!--
+
+Page    : index / MobApp
+Version : 1.0
+Author  : Colorlib
+URI     : https://colorlib.com
+
+-->
+
+<head>
+    <title>مشيني</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobland - Mobile App Landing Page Template">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon"/>
+
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/anmation.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta name="description" content="Responsive Multi-Purpose Landing page">
+
+    <!-- Main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .bg-gradient {
+            background-color: #060a26;
+            background-size: 100%;
+        }
+
+        #map {
+            margin-top: 5%;
+            display: none;
+            height: 59%;
+        }
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+
+<!--Respnosive phone menu-->
+
+<header class="nav-menu animated flipInY">
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+                <div class="btn-group-vertical">
+
+                    <a class="btn btn-success smalltext" href="index.html">الرئيسية</a>
+                    <a class="btn btn-success smalltext" href="Aboutas.html">حول</a>
+                    <a class="btn btn-success smalltext" href="download.html">تحميل </a>
+                    <a class="btn btn-success smalltext" href="driver.html">تسجيل السائق</a>
+                    <a class="btn btn-success smalltext" href="login.html">تسجيل الدخول</a>
+                    <a class="btn btn-success smalltext" href="rigestar.html">تسجيل مزودي الخدمات</a>
+                    <a class="btn btn-success smalltext" href="Contact.html">تواصل معنا</a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-dark ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- End Respnosive phone menu-->
+
+<!--menu right button-->
+<header class="bg-gradient">
+    <div class="btn-group-vertical win-8">
+        <a class="btn btn-success" href="index.html"><img src="images/ic-3.png" alt=""></a>
+        <a class="btn btn-success" href="Aboutas.html"><img src="images/ic-4.png" alt=""></a>
+        <a class="btn btn-success" href="download.html"><img src="images/ic-1.png" alt=""></a>
+        <a class="btn btn-success" href="driver.html"><img src="images/ic-5.jpeg" alt=""></a>
+        <a class="btn btn-success" href="login.html"><img src="images/loginrig.png" alt=""></a>
+        <a class="btn btn-success" href="rigestar.html"><img src="images/serv.png" alt=""></a>
+        <a class="btn btn-success" href="Contact.html"><img src="images/ic-2.png" alt=""></a>
+        <!--End menu right button-->
+
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 form_rig">
+                <!--Form First -->
+                <form id="form-rig">
+                    <img src="images/Logo.png" style=" margin:auto;  width:35%;display:flex;"/>
+
+                    <div class="col-lg-12">
+
+                        <h4 class="headr_serv">سجل كــ مزود خدمة</h4>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">الاسم كامل</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" placeholder="الاسم كامل">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">كلمة المرور</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="كلمة المرور">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">البريد الالكتروني</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" placeholder="البريد الالكتروني">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">رقم الجوال</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" placeholder="رقم الجوال">
+                        </div>
+                        <!--Button Next-->
+
+                        <a type="submit" onclick="showrig_from()" class="btn btn-primary">التالي</a>
+                </form>
+            </div>
+
+            <!--Form Second -->
+            <form id="form2-rig">
+
+                <img src="images/Logo.png" style=" margin:auto;  width:35%;display:flex;"/>
+                <div class="col-lg-12">
+                    <h4 class="headr_serv">سجل كــ مزود خدمة</h4>
+                </div>
+                <!--Dropdowunlist The state -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">الدولة</label>
+                    <select id="inputState" class="form-control">
+                        <option>الدولة</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <!--Dropdowunlist City-->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">المدينة</label>
+                    <select id="inputState" class="form-control">
+                        <option>المدينة</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <!--Dropdowunlist service type -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">نوع الخدمة</label>
+                    <select id="inputState" class="form-control">
+                        <option>نوع الخدمة</option>
+                        <option>علاج</option>
+                        <option>تعليم</option>
+                        <option>سياحة</option>
+                        <option>تجارة</option>
+
+                    </select>
+                </div>
+                <!--Dropdowunlist service  -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">الخدمة</label>
+                    <select id="inputState" class="form-control">
+                        <option>الخدمة</option>
+                        <option>مستشفى</option>
+                        <option>دورة</option>
+                        <option>مدرسة</option>
+                        <option>تجارة</option>
+
+                    </select>
+                </div>
+                <!--Button Next-->
+
+                <a type="submit" onclick="showrig_from2()" id="reig" class="btn btn-primary">التالي</a>
+
+            </form>
+
+
+            <img src="images/Logo.png" id="logo"
+                 style="display: none !important; margin:auto; margin-top:15%; width:35%;display:flex;"/>
+            <div class="col-lg-12" id="pr" style="display:none;">
+                <h4 class="headr_serv">سجل كــ مزود خدمة</h4>
+            </div>
+            <!--Start Google maps Html-->
+            <div id="map"></div>
+            <input id="lng" type="hidden" value="hamza">
+            <input id="lat" type="hidden" value="hamza">
+            <!--END Google maps Html-->
+
+            <!--Button Sign Up-->
+            <a type="submit" id="btns_map" class="btn btn-primary" style="margin-top:5%; display: none; width:67%;">تسجيل</a>
+
+        </div>
+        <div class="col-lg-8 img-rig">
+            <img src="images/Services.svg" style="width:130%;"/>
+        </div>
+    </div>
+</header>
+<!------------------------->
+<!--Start Google maps js-->
+
+
+<!-- jQuery and Bootstrap -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<!-- Custom JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script>
+    function myMap() {
+        var mapProp = {
+            center: new google.maps.LatLng(24.93781342645239 , 46.72206290976101),
+            zoom: 9,
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+        google.maps.event.addListener(map, 'click', function (event) {
+            var lang = event.latLng.lng();
+            var lat = event.latLng.lat();
+            document.getElementById("lng").value = lang;
+            document.getElementById("lat").value = lat;
+        });
+        var marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(24.93781342645239 , 46.72206290976101),
+            icon: 'images/marker.png'
+        });
+        google.maps.event.addListener(map, 'click', function (event) {
+            marker.setPosition(event.latLng);
+        });
+
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_BD5Oea2Sx0S3AQYNaB97s_2M6Qc2FwU&libraries=places&callback=myMap"
+></script>
+
+</body>
+
+</html>

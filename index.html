@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+    <title>مشيني</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/anmation.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+
+        .infoBox {
+            -webkit-animation: fadeIn 0.9s;
+            animation: fadeIn 0.9s;
+            padding-right: 50px;
+        }
+
+        .cluster-visible {
+            text-align: center;
+            font-size: 15px !important;
+            color: #fff !important;
+            font-weight: 500;
+            border-radius: 50%;
+            width: 36px !important;
+            height: 36px !important;
+            line-height: 36px !important;
+            background-color: #fc5b62;
+        }
+
+        .cluster-visible:before {
+            border: 7px solid #fc5b62;
+            opacity: 0.2;
+            box-shadow: inset 0 0 0 4px #fc5b62;
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: cluster-animation 2.5s infinite;
+        }
+
+        .infoBox > img {
+            position: absolute !important;
+            right: 60px !important;
+            top: 10px !important;
+            z-index: 9999;
+            width: 20px;
+            height: 20px;
+            display: block;
+            cursor: pointer;
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .marker_info {
+            width: 240px;
+            height: 270px;
+            border-radius: 5px;
+            text-align: right;
+            background: white;
+            position: relative;
+            z-index: 999;
+            font-family: "Poppins", Helvetica, sans-serif;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .marker_info img {
+            display: block;
+            -webkit-border-radius: 5px 5px 0 0;
+            -moz-border-radius: 5px 5px 0 0;
+            -ms-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .marker_info h3 {
+            font-size: 1rem;
+            line-height: 1.1;
+            font-weight: 500;
+            margin-bottom: 3px;
+            font-family: 'Cairo', sans-serif;
+            color: #444;
+        }
+
+        .marker_info em {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-family: 'Cairo', sans-serif;
+            color: #999;
+        }
+
+        .marker_info span {
+            display: block;
+            padding: 20px 20px 0 20px;
+            font-size: 0.8125rem;
+            line-height: 1.2;
+            color: #fff;
+            position: relative;
+        }
+
+        .marker_info span strong {
+            display: block;
+            font-weight: 500;
+        }
+
+        .marker_info:after {
+            right: 100%;
+            top: 56%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: transparent;
+            border-right-color: white;
+            border-width: 12px;
+            margin-top: -12px;
+        }
+
+        a.btn_infobox_detail {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+        }
+
+        a.btn_infobox_detail i {
+            color: #0054a6;
+            font-size: 16px;
+            transition: all ease-in-out 0.3s;
+            transform: scale(1);
+        }
+        a.btn_infobox_detail:hover i{
+            transform: scale(1.1);
+        }
+
+        a.btn_infobox_detail:before:hover {
+            color: #fc5b62;
+        }
+
+        .btn_infobox_get_directions, a.btn_infobox_phone {
+            border: none;
+            display: inline-block;
+            font-weight: 500;
+            color: #fc5b62;
+            background: none;
+            cursor: pointer;
+            font-size: 0.8125rem;
+            position: relative;
+            margin-bottom: 10px;
+            font-family: 'Cairo', sans-serif;
+            outline: none;
+            padding: 0;
+        }
+
+        #pac-input {
+            background-color: #fff;
+            font-size: 15px;
+            font-weight: 300;
+            margin-left: 12px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 400px;
+            direction: rtl;
+            max-width: 65%;
+            font-family: 'Cairo', sans-serif;
+            margin-top: 10px;
+        }
+        .btn_infobox_get_directions:focus, a.btn_infobox_phone:focus {
+            outline: none;
+        }
+
+        .btn_infobox_get_directions:hover, a.btn_infobox_phone:hover {
+            color: #333;
+        }
+
+        span.infobox_rate {
+            display: inline-block;
+            margin: -44px -20px 0 0;
+            float: right;
+            background-color: #0054a6;
+            font-family: 'Cairo', sans-serif;
+            padding: 5px 8px;
+            font-weight: 500;
+            text-align: left;
+            font-size: 0.75rem;
+        }
+        #myLocation{
+            margin: 10px;
+            height: 40px;
+            width: 40px;
+            background: none rgb(255, 255, 255);
+            border: 0;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 2px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+            font-size: 27px;
+            color: #666;
+        }
+    </style>
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+
+        /* Optional: Makes the sample page fill the window. */
+
+
+    </style>
+</head>
+<body>
+<header class="head">
+    <!-- Start Button Nav menu right-->
+    <div class="btn-group-vertical">
+        <a class="btn btn-success" href="index.html"><img src="images/ic-3.png" alt=""></a>
+        <a class="btn btn-success" href="Aboutas.html"><img src="images/ic-4.png" alt=""></a>
+        <a class="btn btn-success" href="download.html"><img src="images/ic-1.png" alt=""></a>
+        <a class="btn btn-success" href="driver.html"><img src="images/ic-5.jpeg" alt=""></a>
+        <a class="btn btn-success" href="login.html"><img src="images/loginrig.png" alt=""></a>
+        <a class="btn btn-success" href="rigestar.html"><img src="images/serv.png" alt=""></a>
+        <a class="btn btn-success" href="Contact.html"><img src="images/ic-2.png" alt=""></a>
+
+    </div>
+    <!-- End Button Nav menu right-->
+</header>
+
+<section class="bottom_button">
+    <!-- Start Button Nav menu bottom-->
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a class="btn btn-success " id="business"  onclick=" hideAllMarkers(); filterMarkers(this.id); "><img src="images/bt-1.png" class="animated swing" alt=""></a>
+        <a class="btn btn-success " id="health" onclick="hideAllMarkers(); filterMarkers(this.id); "><img src="images/bt-2.png" alt="" class="animated swing"></a>
+        <a class="btn btn-success " id="tourism" onclick="hideAllMarkers(); filterMarkers(this.id);"><img class="animated swing" src="images/bt-3.png" alt=""></a>
+        <a class="btn btn-success " id="education" onclick="hideAllMarkers(); filterMarkers(this.id);"><img class="animated swing" src="images/bt-4.png" alt=""></a>
+        <!--<select id="type" onchange="clearMarkers(); filterMarkers(this.value);">-->
+            <!--<option value="">Please select category</option>-->
+            <!--<option value="education">education</option>-->
+            <!--<option value="tourism">tourism</option>-->
+            <!--<option value="health">health</option>-->
+            <!--<option value="business">business</option>-->
+        <!--</select>-->
+        <!--<input type="button" value="education" >-->
+        <!--<input type="button" value="tourism" onclick=" filterMarkers(this.value); clearMarkers();">-->
+        <!--<input type="button" value="health" onclick="clearMarkers(); filterMarkers(this.value);">-->
+        <!--<input type="button" value="business" onclick="clearMarkers(); filterMarkers(this.value);">-->
+
+
+    </div>
+    <!-- End Button Nav menu bottom-->
+</section>
+<!--Start Google maps Html-->
+<input id="pac-input" class="controls" type="text" placeholder="بحث عن اماكن">
+<button title="مكاني على الخريطة" id="myLocation" onclick="geolocate();"><i class="fal fa-location"></i></button>
+<div id="map"></div>
+<!--END Google maps Html-->
+<!------------------------->
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script src="js/markerclusterer.js"></script>
+
+<script src="js/map_restaurants.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_BD5Oea2Sx0S3AQYNaB97s_2M6Qc2FwU&libraries=places&callback=initAutocomplete"
+></script>
+<script src="js/infobox.js" ></script>
+
+
+<script>
+</script>
+<!--Start Google maps js-->
+
+<!-- Google maps KEY API-->
+<!--END Google maps js-->
+
+</body>
+</html>
